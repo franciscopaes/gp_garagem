@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 90px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00cfff;
+}
+
+.btn-agendar {
+  background: #00cfff; 
+  border: none;
+  padding: 10px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-agendar:hover {
+  background: #009ec4;
+}
+
+
+
+/* HERO */
+.hero {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 120px 80px;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #00cfff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #00cfff;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #00cfff;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #00cfff;
+  padding: 14px 30px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #009ec4;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #00cfff;
+  color: #00cfff;
+  padding: 14px 30px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #00cfff;
+  color: black;
+}
+
+/* MENU MOBILE */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  /* O MENU QUE DESCE DE CIMA */
+  .nav-links {
+    position: fixed;
+    top: -100%; /* Começa escondido acima da tela */
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ocupa a tela inteira */
+    background: #0b141a; /* Cor marinho bem escura do print */
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha os itens no topo */
+    align-items: flex-start;
+    padding: 100px 30px 40px 30px; /* Espaço para não bater na logo/X */
+    gap: 20px;
+    transition: 0.5s ease-in-out;
+    z-index: 999;
+    opacity: 0;
+  }
+
+  /* Quando o menu está aberto */
+  .nav-links.active {
+    top: 0; /* Desce para a posição zero */
+    opacity: 1;
+  }
+
+  /* Estilo dos Links */
+  .nav-links a {
+    font-size: 22px;
+    color: #8a94a6;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linha divisória sutil */
+    text-decoration: none;
+  }
+
+  /* Botão Agendar (Full Width no rodapé) */
+  .nav-links .btn-agendar {
+    width: 100%;
+    margin-top: auto; /* Joga o botão para o fim da tela */
+    background: #00a3ff;
+    color: #000;
+    font-weight: 700;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 18px;
+    border: none;
+  }
+
+  /* Ícone de fechar (X) e Menu (Hambúrguer) */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1001; /* Fica acima do menu que desceu */
+    font-size: 30px;
+    color: white;
+  }
+
+  /* Ajustes do Hero para não bugar */
+  .hero {
+    padding: 40px 20px;
+  }
+  .hero h1 { font-size: 40px; }
+  .buttons { flex-direction: column; width: 100%; }
+}

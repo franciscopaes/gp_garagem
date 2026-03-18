@@ -1,0 +1,106 @@
+.servicos-section {
+  padding: 80px 8%;
+  background-color: #0b141a; /* Fundo escuro condizente com o projeto */
+  color: white;
+  text-align: center;
+}
+
+.servicos-header h5 {
+  color: #00a3ff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.servicos-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo do Card */
+.servico-card {
+  background: #121d25; /* Tom um pouco mais claro que o fundo */
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.4s ease;
+  border: 1px solid rgba(0, 163, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.servico-card:hover {
+  transform: translateY(-10px);
+  border-color: #00a3ff;
+  box-shadow: 0 0 20px rgba(0, 163, 255, 0.2);
+}
+
+/* Imagem e Ícone */
+.card-image {
+  position: relative;
+  height: 220px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: rgba(11, 20, 26, 0.8);
+  backdrop-filter: blur(5px);
+  border: 1px solid #00a3ff;
+  color: #00a3ff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+/* Conteúdo */
+.card-content {
+  padding: 30px 25px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.card-content p {
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servicos-section {
+    padding: 60px 20px;
+  }
+  
+  .servicos-header h2 {
+    font-size: 32px;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+}

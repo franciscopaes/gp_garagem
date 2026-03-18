@@ -1,0 +1,153 @@
+.precos-section {
+  padding: 80px 8%;
+  background-color: #0b141a;
+  color: white;
+  text-align: center;
+}
+
+.precos-header h5 {
+  color: #00a3ff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.precos-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.precos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Card Padrão */
+.preco-card {
+  background: #121d25;
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Destaque (Meio) */
+.preco-card.destaque {
+  border: 1px dashed #00a3ff;
+  box-shadow: 0 0 30px rgba(0, 163, 255, 0.15);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.badge-popular {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00a3ff;
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.preco-card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.preco-valor {
+  font-size: 48px;
+  font-weight: 800;
+  color: #00a3ff;
+  margin-bottom: 30px;
+}
+
+.preco-valor span {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Lista de itens */
+.lista-beneficios {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.lista-beneficios li {
+  margin-bottom: 15px;
+  color: #a0a0a0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-check {
+  color: #00a3ff;
+  font-size: 14px;
+}
+
+/* Botões */
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0, 163, 255, 0.3);
+  color: #00a3ff;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 163, 255, 0.1);
+}
+
+.btn-destaque {
+  background: #00a3ff;
+  border: none;
+  color: #000;
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 163, 255, 0.3);
+}
+
+.btn-destaque:hover {
+  background: #0082cc;
+  transform: translateY(-2px);
+}
+
+.btn-agendar, .btn-destaque, .btn-outline, .btn-secondary {
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 768px) {
+  .preco-card.destaque {
+    transform: scale(1);
+    margin: 20px 0;
+  }
+  
+  .precos-grid {
+    gap: 40px;
+  }
+}
